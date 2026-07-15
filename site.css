@@ -246,6 +246,10 @@ main {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid.six {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .split {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -259,6 +263,33 @@ main {
 .card p,
 .prose li {
   color: var(--muted);
+}
+
+.offer-card {
+  display: grid;
+  gap: 10px;
+}
+
+.offer-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.offer-card li + li {
+  margin-top: 8px;
+}
+
+.offer-card.featured {
+  border-color: rgba(246, 200, 95, 0.45);
+  background: linear-gradient(180deg, rgba(246, 200, 95, 0.10), rgba(11, 16, 32, 0.92));
+}
+
+.offer-kicker {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .card-meta {
@@ -340,6 +371,7 @@ main {
 @media (max-width: 960px) {
   .intro-band,
   .hero-grid,
+  .grid.six,
   .grid.three,
   .grid.four,
   .split,
