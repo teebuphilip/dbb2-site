@@ -246,6 +246,10 @@ main {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid.five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .grid.six {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -263,6 +267,11 @@ main {
 .card p,
 .prose li {
   color: var(--muted);
+}
+
+.audience-card {
+  display: grid;
+  gap: 8px;
 }
 
 .offer-card {
@@ -371,6 +380,7 @@ main {
 @media (max-width: 960px) {
   .intro-band,
   .hero-grid,
+  .grid.five,
   .grid.six,
   .grid.three,
   .grid.four,
